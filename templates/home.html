@@ -1,3 +1,36 @@
-<h1>
-    Hello World
-</h1>
+<body>
+ <div class="login">
+	<h1>Vehicle Loan Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="disbursed_amount" placeholder="disbursed_amount" required="required" /><br>
+    	<input type="text" name="ltv" placeholder="ltv" required="required" /><br>
+        <input type="text" name="manufacturer_id" placeholder="manufacturer_id" required="required" /><br>
+        <input type="text" name="State_ID" placeholder="State_ID" required="required" /><br>
+        <input type="text" name="Aadhar_flag" placeholder="Aadhar_flag" required="required" /><br>
+        <input type="text" name="VoterID_flag" placeholder="VoterID_flag" required="required" /><br>
+        <input type="text" name="NEW.ACCTS.IN.LAST.SIX.MONTHS" placeholder="NEW.ACCTS.IN.LAST.SIX.MONTHS" required="required" /><br>
+        <input type="text" name="CREDIT.HISTORY.LENGTH" placeholder="CREDIT.HISTORY.LENGTH" required="required" /><br>
+        <input type="text" name="NO.OF_INQUIRIES" placeholder="NO.OF_INQUIRIES" required="required" /><br>
+        <input type="text" name="self_employed" placeholder="self_employed" required="required" /><br>
+        <input type="text" name="Age" placeholder="Age" required="required" /><br>
+        <input type="text" name="risk" placeholder="risk" required="required" /><br>
+        <input type="text" name="active_accts" placeholder="active_accts" required="required" /><br>
+        <input type="text" name="overdue_accts" placeholder="overdue_accts" required="required" /><br>
+        <input type="text" name="sanctioned_amount" placeholder="sanctioned_amount" required="required" /><br> 
+        <input type="text" name="install_amt" placeholder="install_amt" required="required" /><br> 
+
+       
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>

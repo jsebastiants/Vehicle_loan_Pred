@@ -31,6 +31,14 @@ def ValuePredictor(to_predict_list):
     to_predict = scalar.transform(to_predict)
     output=lr_model.predict(to_predict)
     return output[0]
+
+@app.route('/predict',methods=['POST'])
+def predict():
+    data=[float(x) for x in request.form.values()]
+    final_input=scalar.transform(np.array(data).reshape(1,-1))
+    print(final_input)
+    output=lr_model.predict(final_input)[0]
+    return render_template("home.html",prediction_text="The prediction is {}".format(output))
     
 
 if __name__=="__main__":
