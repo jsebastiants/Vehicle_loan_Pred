@@ -8,3 +8,4 @@ statsmodels
 imbalanced-learn
 lightgbm
 xgboost
+gunicorn

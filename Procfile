@@ -1,1 +1,1 @@
-web gunicorn app:apppip --version
+web: gunicorn app:app
