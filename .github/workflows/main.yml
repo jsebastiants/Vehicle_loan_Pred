@@ -1,0 +1,29 @@
+# Your workflow name.
+name: Deploy to Railway.
+
+# Run workflow on every push to main branch.
+on:
+  push:
+    branches: [main]
+
+# Your workflows jobs.
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Check-out your repository.
+      - name: Check out code
+        uses: actions/checkout@v2
+
+
+### ⬇ IMPORTANT PART ⬇ ###
+
+      - uses: mr-smithers-excellent/docker-build-push@v5
+        with:
+          image: sebastian624/vehicle_loan_pred
+          registry: docker.io
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+                  
+
+### ⬆ IMPORTANT PART ⬆ ###
