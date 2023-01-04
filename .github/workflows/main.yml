@@ -26,4 +26,8 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
                   
 
+<<<<<<< HEAD
 ### ⬆ IMPORTANT PART ⬆ ###
+=======
+### ⬆ IMPORTANT PART ⬆ ###
+>>>>>>> 0b6e3ba3b483a96b22bc27c43621881644b147eb
